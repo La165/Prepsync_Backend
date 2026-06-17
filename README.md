@@ -6,6 +6,12 @@ It powers the PrepSync learning platform by handling authentication, user manage
 
 The backend is deployed on Railway and uses MySQL as the primary database.
 
+
+This repository is part of the PrepSync full-stack learning platform.
+
+👉 Frontend Repo: https://github.com/La165/Prepsync_Frontend  
+👉 Live Backend API: https://prepsyncbackend-production.up.railway.app/
+
 ---
 
 ## 🌐 Live API
