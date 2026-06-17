@@ -106,6 +106,15 @@ public class TopicService {
     	   topic.setNextRevisionDate(calculateNextRevision(newRevisionCount));
     	   return topicRepository.save(topic);
     	  }
+		  public List<Topic> getRevisionQueue(String email)
+{
+    User user = userRepository.findByEmail(email)
+            .orElseThrow(() ->
+                    new RuntimeException("User not found"));
+
+    return topicRepository
+            .findByUserOrderByNextRevisionDateAsc(user);
+}
      
      public List<Topic> getOverdueTopics(
     	        String email

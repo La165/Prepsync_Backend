@@ -20,6 +20,9 @@ public interface TopicRepository
             User user,
             LocalDate date
     );
+    List<Topic> findByUserOrderByNextRevisionDateAsc(
+        User user
+);
     
     
  

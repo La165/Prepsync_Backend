@@ -70,6 +70,17 @@ public class TopicController {
 	            topicService.getOverdueTopics(email)
 	    );
 	}
+
+	@GetMapping("/revision-queue")
+public ResponseEntity<List<Topic>> getRevisionQueue(
+        Authentication authentication)
+{
+    String email = authentication.getName();
+
+    return ResponseEntity.ok(
+            topicService.getRevisionQueue(email)
+    );
+}
 	
 	
 	@PutMapping("/{id}")
